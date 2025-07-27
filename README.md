@@ -11,8 +11,8 @@
 
 </hr>
 
-▶️ [Demo Video Link](https://youtu.be/G9jnp1rrJX0)
-📚 [Deep Wiki Link](https://deepwiki.com/wamaithaNyamu/MQL5CodingAgent)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fyoutu.be%2FG9jnp1rrJX0&up_message=Demo%20of%20the%20Agent&style=for-the-badge)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fdeepwiki.com%2FwamaithaNyamu%2FMQL5CodingAgent%2F3-system-architecture&up_message=Demo%20of%20the%20Agent&style=for-the-badge)
 
 </hr>
 <!-- Accompanying blog can be found [here](https://wamaithanyamu.com/
