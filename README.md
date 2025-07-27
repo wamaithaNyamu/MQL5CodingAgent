@@ -9,10 +9,12 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
+</hr>
 
+▶️ [Demo Video Link](https://youtu.be/G9jnp1rrJX0)
+📚 [Deep Wiki Link](https://deepwiki.com/wamaithaNyamu/MQL5CodingAgent)
 
-[Demo Video Link](https://youtu.be/G9jnp1rrJX0)
-
+</hr>
 <!-- Accompanying blog can be found [here](https://wamaithanyamu.com/
 ) -->
 <div>
@@ -34,9 +36,8 @@ The code is uploaded to GCS bucket. Once the user makes a payment, they can down
 
 Here is a detailed documentation on how the code works
 
-![MQL5CodingAgent](./Images/deepwiki.gif)
+[![MQL5CodingAgent](./Images/deepwiki.gif)](https://deepwiki.com/wamaithaNyamu/MQL5CodingAgent)
 
-[Deep Wiki Link](https://deepwiki.com/wamaithaNyamu/MQL5CodingAgent)
 
 **Note**:
 Ideally the code should not be shown to the user but for now its visible. You can adapt this to suit your own implementation. You can use the examples at `backend/sample.md` to answer the Agents questions if you have no idea on how trading works.
