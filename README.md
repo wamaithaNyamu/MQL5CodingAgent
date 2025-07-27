@@ -49,7 +49,7 @@ The temporal ui will be running at `localhost:8080`
 ### Areas of improvements:
 - The prompt needs to be refined some more.
 - Consider context engineering further for example using a knowledge graph, giving better examples, or even using the MQL5 docs as part of a RAG pipeline.
-
+- Have redis as a a service on its own to avoid duplicating the client creation.
 
 
 <!-- CONTRIBUTING -->
