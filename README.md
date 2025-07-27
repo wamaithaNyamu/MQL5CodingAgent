@@ -10,11 +10,6 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-<div class="video-container">
-    <img src="./Images/cover.png" alt="Video Thumbnail" class="video-thumbnail">
-    <div class="play-button"></div>
-    <iframe class="youtube-player" src="https://www.youtube.com/embed/G9jnp1rrJX0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
 
 [Demo Video Link](https://youtu.be/G9jnp1rrJX0)
 
@@ -24,6 +19,7 @@
 <h3 align="center">A goal based AI agent whose goal is to get user requirements to build a trading bot. The requirements are used to generate MQL5 code. 
 </h3>
 
+[![MQL5CodingAgent](./Images/cover.png)](https://www.youtube.com/embed/G9jnp1rrJX0)
 
 </div>
 
