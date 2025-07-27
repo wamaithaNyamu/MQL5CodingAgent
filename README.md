@@ -10,8 +10,14 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-<!-- PROJECT LOGO -->
-![MQL5CodingAgent](./Images/cover.png)
+<div class="video-container">
+    <img src="./Images/cover.png" alt="Video Thumbnail" class="video-thumbnail">
+    <div class="play-button"></div>
+    <iframe class="youtube-player" src="https://www.youtube.com/embed/G9jnp1rrJX0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+[Demo Video Link](https://youtu.be/G9jnp1rrJX0)
+
 <!-- Accompanying blog can be found [here](https://wamaithanyamu.com/
 ) -->
 <div>
@@ -21,6 +27,7 @@
 
 </div>
 
+</hr>
 
 See the [open issues](https://github.com/wamaithanyamu/MQL5CodingAgent/issues) for a full list of proposed features (and known issues).
 # MQL5CodingAgent
@@ -28,6 +35,12 @@ This repo implements a temporal powered AI agent whose goal is to get user requi
 
 The agent also bills the user of the code generated.
 The code is uploaded to GCS bucket. Once the user makes a payment, they can download the code.
+
+Here is a detailed documentation on how the code works
+
+![MQL5CodingAgent](./Images/deepwiki.gif)
+
+[Deep Wiki Link](https://deepwiki.com/wamaithaNyamu/MQL5CodingAgent)
 
 **Note**:
 Ideally the code should not be shown to the user but for now its visible. You can adapt this to suit your own implementation. You can use the examples at `backend/sample.md` to answer the Agents questions if you have no idea on how trading works.
@@ -40,6 +53,7 @@ Instructions on running the frontend can be found at `frontend/README.md`
 
 The backend will be running at `localhost:9090`
 The temporal ui will be running at `localhost:8080`
+
 
 #### Known issues:
 - The first message sometimes does not show up on the frontend ui
@@ -108,7 +122,7 @@ Project Link: [https://github.com/wamaithanyamu/MQL5CodingAgent
 [license-shield]: https://img.shields.io/github/license/wamaithanyamu/MQL5CodingAgent.svg?style=for-the-badge
 
 
-[license-url]: https://github.com/wamaithanyamu/MQL5CodingAgent/blob/master/LICENSE.txt
+[license-url]: https://github.com/wamaithanyamu/MQL5CodingAgent/blob/main/LICENSE
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/wamaithanyamu
