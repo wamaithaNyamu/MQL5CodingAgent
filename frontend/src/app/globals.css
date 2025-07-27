@@ -1,0 +1,351 @@
+@import "tailwindcss";
+@plugin 'tailwind-scrollbar';
+/* @import "tw-animate-css"; */
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* this has the flat look */
+:root {
+  --radius: 0.5rem; /* Border radius for UI elements (e.g. buttons, cards) */
+
+  --background: oklch(100% 0.00011 271.152); /* Light background, essentially white (#fafafa) */
+  --foreground: oklch(0.141 0.005 285.823); /* Primary text color, dark blueish-gray */
+
+  --card: oklch(1 0 0); /* Card background, pure white */
+  --card-foreground: oklch(0.141 0.005 285.823); /* Card text color */
+
+  --popover: oklch(1 0 0); /* Popover background (e.g. tooltips, dropdowns) */
+  --popover-foreground: oklch(0.141 0.005 285.823); /* Text color inside popovers */
+
+  --primary: oklch(0.723 0.219 149.579); /* Primary theme color (used for buttons, links) */
+  --primary-foreground: oklch(0.982 0.018 155.826); /* Text on primary background (should have high contrast) */
+
+  --secondary: oklch(0.967 0.001 286.375); /* Secondary background color (very light bluish tone) */
+  --secondary-foreground: oklch(0.21 0.006 285.885); /* Text on secondary background */
+
+  --muted: oklch(0.967 0.001 286.375); /* Muted background for subdued elements (same as secondary here) */
+  --muted-foreground: oklch(0.552 0.016 285.938); /* Muted text color (used for secondary info, placeholders) */
+
+  --accent: oklch(0.8474 0.1564 92.37); /* Accent color for highlights or UI emphasis */
+  --accent-foreground: oklch(0.21 0.006 285.885); /* Text on accent background */
+
+  --destructive: oklch(0.577 0.245 27.325); /* Red tone for errors, warnings, destructive actions (like delete) */
+
+  --border: oklch(0.92 0.004 286.32); /* Light color used for borders */
+  --input: oklch(0.92 0.004 286.32); /* Input background (same as border here) */
+
+  --ring: oklch(0.723 0.219 149.579); /* Focus ring or outline color, same as primary */
+
+  /* Chart palette colors for data visualization */
+  --chart-1: oklch(0.646 0.222 41.116);   /* Orange-like tone */
+  --chart-2: oklch(0.6 0.118 184.704);    /* Blue */
+  --chart-3: oklch(0.398 0.07 227.392);   /* Purple */
+  --chart-4: oklch(0.828 0.189 84.429);   /* Yellow */
+  --chart-5: oklch(0.769 0.188 70.08);    /* Gold-brown */
+
+  /* Sidebar-specific styles */
+  --sidebar: oklch(0.985 0 0); /* Sidebar background, almost white */
+  --sidebar-foreground: oklch(0.141 0.005 285.823); /* Sidebar text */
+  --sidebar-primary: oklch(0.723 0.219 149.579); /* Primary sidebar highlight */
+  --sidebar-primary-foreground: oklch(0.982 0.018 155.826); /* Text on primary sidebar color */
+  --sidebar-accent: oklch(0.967 0.001 286.375); /* Accent in sidebar (e.g. hovered items) */
+  --sidebar-accent-foreground: oklch(0.21 0.006 285.885); /* Text on sidebar accent background */
+  --sidebar-border: oklch(0.92 0.004 286.32); /* Border color in sidebar */
+  --sidebar-ring: oklch(0.723 0.219 149.579); /* Focus ring color in sidebar (same as primary) */
+
+}
+
+.dark {
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.21 0.006 285.885);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.21 0.006 285.885);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.696 0.17 162.48);
+  --primary-foreground: oklch(0.393 0.095 152.535);
+  --secondary: oklch(0.274 0.006 286.033);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067);
+  --accent: oklch(0.274 0.006 286.033);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.527 0.154 150.069);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.21 0.006 285.885);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.696 0.17 162.48);
+  --sidebar-primary-foreground: oklch(0.393 0.095 152.535);
+  --sidebar-accent: oklch(0.274 0.006 286.033);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.527 0.154 150.069);
+}
+/* this has the goalspredicted look */
+/* :root {
+  --background: 0 0% 100%;
+  --foreground: 8 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 8 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 8 10% 3.9%;
+  --primary: 8, 84%, 39%;
+  --primary-foreground: 355.7 100% 97.3%;
+  --secondary: 9, 58%, 75%;
+  --secondary-foreground: 8 5.9% 10%;
+  --muted: 9, 58%, 75%;
+  --muted-foreground: 8 3.8% 46.1%;
+  --accent: 9, 58%, 75%;
+  --accent-foreground: 8 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 8 5.9% 90%;
+  --input: 8 5.9% 90%;
+  --ring: 8, 84%, 39%;
+  --radius: 0.5rem;
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+} */
+
+.dark {
+  --background: 20 14.3% 4.1%;
+  --foreground: 0 0% 95%;
+  --card: 24 9.8% 10%;
+  --card-foreground: 0 0% 95%;
+  --popover: 0 0% 9%;
+  --popover-foreground: 0 0% 95%;
+  --primary: 355.7 100% 97.3%;
+  --primary-foreground: 144.9 80.4% 10%;
+  --secondary: 9, 58%, 75%;
+  --secondary-foreground: 9, 58%, 75%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 12 6.5% 15.1%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 85.7% 97.3%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 142.4 71.8% 29.2%;
+  --chart-1: 220 70% 50%;
+  --chart-2: 160 60% 45%;
+  --chart-3: 30 80% 55%;
+  --chart-4: 280 65% 60%;
+  --chart-5: 340 75% 55%;
+}
+
+@layer base {
+ 
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+}
+
+/* .shadow-light {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.085);
+}
+
+.shadow-dark {
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.141);
+} */
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Add this to your existing CSS */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes float-delay {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float-slower {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes float-medium {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float-delay 6s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.animate-float-slower {
+  animation: float-slower 8s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float-medium 6s ease-in-out infinite;
+  animation-delay: 2s;
+}
+@keyframes bounce-shadow {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  50% {
+    transform: translateY(-15px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.animate-bounce-shadow {
+  animation: bounce-shadow 1s ease-in-out infinite;
+}
+
+.card-header-bg {
+  background-image: url('/assets/bg.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.ai-bg {
+  background-image: url('/assets/dots.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Hide scrollbar for all major browsers */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+html, body, #root {
+  height: 100%;
+  overflow: hidden; /* prevent body scroll */
+  font-size: 0.9rem;
+}
+/* globals.css */
+body {
+  /* font-family: var(--font-sans-regular-mono), sans-serif; */
+  font-family: var(--font-sans-regular-mono),sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.01em;
+   word-spacing: -0.2rem;
+}
+
+code,
+pre {
+ font-family: var(--font-intel-medium) ,sans-serif;
+   font-weight: 200;
+    letter-spacing: 0.01em;
+   word-spacing: -0.1rem;
+  }
+
+/* If you have a specific class for code blocks */
+.my-code-block {
+  font-family: var(--font-intel-medium) ,sans-serif;
+   /* font-weight: 200; */
+    letter-spacing: 0.01em;
+   word-spacing: -0.1rem;
+}
+
+
+ 
+
+/* In your globals.css or a relevant CSS file */
+
+/* In your globals.css or a dedicated CSS file for React Flow */
+
+/* This targets all resizer handles (corners and edges) */
+.react-flow__node-resizer-handle {
+  width: 200px; /* Set a default size for all handles */
+  height: 12px;
+  border-width: 2px;
+  border-radius: 2px;
+}
+
+/* This specifically targets the corner handles and makes them even larger */
+.react-flow__node-resizer-handle.react-flow__node-resizer-handle-corner {
+  width: 16px;
+  height: 16px;
+  border-width: 3px; /* Make the border thicker for better visibility */
+}

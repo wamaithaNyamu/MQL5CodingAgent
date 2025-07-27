@@ -1,0 +1,18 @@
+{
+  "watch": ["src"],
+  "ext": "ts",
+  "execMap": {
+    "ts": "node --loader ts-node/esm"
+  },
+  "signal": "SIGUSR2", 
+  "verbose": true,     
+  "events": {         
+    "restart": "clear && echo 'Nodemon restarting backend...'"
+  },
+  "ignore": [        
+    "node_modules",
+    "dist",
+    ".git",
+    "*.log"
+  ]
+}

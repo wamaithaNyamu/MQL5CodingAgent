@@ -1,0 +1,1 @@
+export const BUILD_A_TRADING_BOT = 'build_a_trading_bot_queue';
