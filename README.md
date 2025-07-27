@@ -119,7 +119,7 @@ Project Link: [https://github.com/wamaithanyamu/MQL5CodingAgent
 [license-shield]: https://img.shields.io/github/license/wamaithanyamu/MQL5CodingAgent.svg?style=for-the-badge
 
 
-[license-url]: https://github.com/wamaithanyamu/MQL5CodingAgent/blob/main/LICENSE
+[license-url]: https://github.com/wamaithanyamu/MQL5CodingAgent/blob/main/LICENSE.txt
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/wamaithanyamu
